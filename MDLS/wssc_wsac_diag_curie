@@ -1,0 +1,5 @@
+set terminal png
+set output 'wssc_wsac_curie_diag.png'
+set xlabel 'NB Process'
+set ylabel 'Time (s)'
+plot './wssc_curie_diag' w lp title 'wssc_diag', './wsac_curie_diag' w lp title 'wsac_diag'

@@ -1,0 +1,5 @@
+set terminal png
+set output 'gnu.png'
+set xlabel 'NB Process'
+set ylabel 'Time (s)'
+plot './wssc_diag.txt' w lp title 'WSSC', './wssc_diag.txt' using 1:2:3:4 title 'Errors' with yerrorbars, './wsac_diag.txt' w lp title 'WSAC', './wsac_diag.txt' using 1:2:3:4 title 'Error' with yerrorbars, './WSSC_SOM.txt' w lp title 'WSSC', './WSSC_SOM.txt' using 1:2:3:4 title 'error' with yerrorbars, './WSAC_SOM.txt' w lp title 'WSAC', './WSAC_SOM.txt' using 1:2:3:4 title 'Error' with yerrorbars

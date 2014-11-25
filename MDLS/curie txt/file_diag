@@ -1,0 +1,6 @@
+#set terminal png
+#set output 'wsac_wssc_diff_2.png'
+set xlabel 'NB Process'
+set ylabel 'Time (s)'
+set title 'Temps de checkpoint -- Curie'
+plot './diff' using 1:($2-$3) with lines title 'Différence'

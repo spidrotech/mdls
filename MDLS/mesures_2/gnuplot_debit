@@ -1,0 +1,8 @@
+set terminal png
+set output 'debit.png'
+set xlabel 'NB Process'
+set ylabel 'Vitesse (octet / seconde)'
+set xrange [0:16]
+set yrange [0:40000000]
+set title 'Débit de checkpoint par seconde -- Curie'
+plot './Debit_wsac_diag' using 1:($3*$4)/$2 w lp title 'Débit moins diags','./Debit_wsac' using 1:($3*$4)/$2 w lp title 'Débit plus diags'

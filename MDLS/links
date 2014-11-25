@@ -1,0 +1,5 @@
+http://www.prace-project.eu/Best-Practice-Guide-Curie-HTML#id-1.3.3.4
+ccc_mpp -u amrih : pour lister les jobs soumis par amrih
+
+stat -c %s gys_rst.sp0.n* > file_test.txt
+awk '{ sum += $1 } END { print (sum / NR)}' file_test.txt

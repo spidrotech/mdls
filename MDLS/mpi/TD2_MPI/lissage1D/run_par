@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -x
+
+mpipath="/users/ens/dureau/mpich-3.0.1"
+
+parexe="./$1"
+nproc=$2
+nb_li=`cat donnees | wc -l`
+par=`basename $parexe`
+
+
+$mpipath/bin/mpiexec -n $nproc $parexe donnees $nb_li
+
+set +x
+str_plot="plot \"lissage.txt\" w lp, \"$par.txt\" w lp"
+echo $str_plot > plot.gnu
+echo "pause -1 \"Frappez return pour quitter ...\"" >> plot.gnu
+set -x
+
+gnuplot plot.gnu
+rm -f plot.gnu
+

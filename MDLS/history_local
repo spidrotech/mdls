@@ -1,0 +1,56 @@
+  419  ssh amrih@curie.ccc.cea.fr
+  420  ssh -vvv amrih@curie.ccc.cea.fr
+  421  ssh -v amrih@curie.ccc.cea.fr
+  422  ll ~/.ssh/
+  423  ssh -v amrih@curie.ccc.cea.fr
+  424  ssh amrih@curie.ccc.cea.fr
+  425  clear
+  426  ls -l
+  427  ssh poincare
+  428  vi .ssh/config 
+  429  ls
+  430  cd
+  431  ls
+  432  cat /etc/hosts
+  433  vim /etc/hosts
+  434  cat /etc/hosts
+  435  vi .ssh/config 
+  436  ssh amrih@curie.ccc.cea.fr
+  437  llq
+  438  ls
+  439  ssh poincare
+  440  cd Bureau/
+  441  ls
+  442  cd gysela
+  443  ls
+  444  git branch 
+  445  git checkout 
+  446  git checkout svn-trunk 
+  447  git branch -a
+  448  git pull 
+  449  cd ..
+  450  ls
+  451  rm -rf gysela-old/
+  452  mv gysela gysela-old
+  453  ls
+  454  git clone git+ssh://hamri@scm.gforge.inria.fr//gitroot/gyseladoc/gysela.git
+  455  ls
+  456  cd gysela
+  457  ls
+  458  git branch 
+  459  git checkout svn-trunk 
+  460  git remote 
+  461  git remote add curie ssh://amrih@curie.ccc.cea.fr/ccc/cont005/home/pa1401/amrih/gysela.git
+  462  git remote show origin 
+  463  git remote show curie 
+  464  ls ~/.ssh
+  465  cat ~/.ssh/id_rsa.pub 
+  466  git help push
+  467  git push --all curie
+  468  ssh poincare
+  469  ls
+  470  cd wk/
+  471  ls
+  472  cat data_test
+  473  ls
+  474  ssh poincare

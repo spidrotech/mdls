@@ -1,0 +1,18 @@
+#!/bin/sh
+
+nb_li=`cat donnees | wc -l`
+
+set -x
+./seq.exe donnees $nb_li
+set +x
+
+rm -f seq.plot
+touch seq.plot
+echo "plot \"lissage.txt\" w lp" >> seq.plot
+echo "pause -1 \"Tapez Return pour quitter\"" >> seq.plot
+
+set -x
+gnuplot seq.plot
+set +x
+rm -rf seq.plot
+

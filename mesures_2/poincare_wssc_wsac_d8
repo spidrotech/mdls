@@ -1,0 +1,6 @@
+set terminal png
+set output 'wsac_wssc_poincare_d8.png'
+set xlabel 'NB Process'
+set ylabel 'Time (s)'
+set title 'Weak Scaling Checkpoint Synchrone et Sans Checkpoint avec D8'
+plot './wsac_diag.txt' with lines title 'Checkpoint Synchrone D8','./wsac_diag.txt' using 1:2:3:4 with yerrorbars title 'Checkpoint Synchrone D8','./wssc_diag.txt' with lines title 'Sans Checkpoint','./wssc_diag.txt' using 1:2:3:4 with yerrorbars title 'Sans Checkpoint'

@@ -1,0 +1,8 @@
+set terminal png
+set output 'wsac_wssc.png'
+set xlabel 'NB Process'
+set ylabel 'Time (s)'
+set xrange [0:20]
+set yrange [0:6000]
+set title 'Weak Scaling Avec et Sans Checkpoint Diag 1:8 -- poincare'
+plot 'WSAC_SOM.txt' using 1:3 w lp title 'WSAC','WSAC_SOM.txt' using 1:2:3:4 with yerrorbars title 'error','WSSC_SOM.txt' using 1:3 w lp title 'WSSC','WSSC_SOM.txt' using 1:2:3:4 with yerrorbars title 'error','wsac_diag.txt' w lp title 'wsac_diag','wssc_diag.txt' w lp title 'WSSC_Diag'

@@ -1,0 +1,6 @@
+set terminal png
+set output 'wsac_poincare.png'
+set xlabel 'NB Process'
+set ylabel 'Time (s)'
+set title 'Weak Scaling Checkpoint Synchrone D8 sur poincare'
+plot './WSAC_SOM.txt' with lines title 'Checkpoint Synchrone','./WSAC_SOM.txt' using 1:2:3:4 with yerrorbars title 'Checkpoint Synchrone','./WSAC_SOM_DIAG.txt' with lines title 'Checkpoint Synchrone D8','./WSAC_SOM_DIAG.txt' using 1:2:3:4 with yerrorbars title 'Checkpoint Synchrone D8'

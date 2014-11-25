@@ -1,0 +1,7 @@
+#!/bin/sh
+
+MPI_PATH=/users/ens/dureau/mpich-3.0.1/bin
+
+set -x
+$MPI_PATH/mpicc -g $1 -o $2
+

@@ -1,0 +1,8 @@
+set terminal png
+set output 'wsac_wssc_d8_curie.png'
+set xlabel 'NB Process'
+set ylabel 'Time (s)'
+set xrange [0:16]
+set yrange [0:1500]
+set title 'Weak Scaling avec et sans checkpoint d8-- Curie'
+plot './wsac_diag' w lp title 'wsac_diag8','./wssc_diag' w lp title 'wssc_diag8'

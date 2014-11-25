@@ -1,0 +1,8 @@
+set terminal png
+set output 'wsac_wssc_poincare.png'
+set xlabel 'NB Process'
+set ylabel 'Time (s)'
+set xrange [0:35]
+set yrange [0:6000]
+set title 'Weak Scaling Checkpoint Synchrone et Sans Checkpoint'
+plot './WSAC_SOM.txt' with lines title 'Checkpoint Synchrone','./WSAC_SOM.txt' using 1:2:3:4 with yerrorbars title 'Checkpoint Synchrone','./WSSC_SOM.txt' with lines title 'Sans Checkpoint','./WSSC_SOM.txt' using 1:2:3:4 with yerrorbars title 'Sans Checkpoint'

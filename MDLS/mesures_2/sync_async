@@ -1,0 +1,6 @@
+set terminal png
+set output 'sync_async.png'
+set xlabel 'NB Process'
+set ylabel 'Time (s)'
+set title 'Checkpoint Synchrone & Checkpoint Asynchrone -- poincare'
+plot 'sync_som.txt' w lp title 'Synchrone','Async_som.txt' w lp title 'Ashynchrone'

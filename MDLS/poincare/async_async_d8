@@ -1,0 +1,8 @@
+set terminal png
+set output 'async_async_D8.png'
+set xlabel 'NB Process'
+set ylabel 'Time (s)'
+set xrange [0:16]
+set yrange [0:6500]
+set title 'Checkpoint asynchrone d8 et checkpoint asynchrone -- poincare'
+plot './async_diag' using 1:2 with lines title 'Checkpoint asynchrone D8','./async' using 1:2 with lines title 'Checkpoint async'

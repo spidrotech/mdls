@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -x
+gcc sequentiel.c -o seq.exe
+
